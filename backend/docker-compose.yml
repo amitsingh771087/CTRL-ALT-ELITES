@@ -1,0 +1,13 @@
+# Local MongoDB for development. Run: docker compose up -d
+version: '3.8'
+services:
+  mongo:
+    image: mongo:7
+    container_name: govsync-mongo
+    restart: unless-stopped
+    ports:
+      - '27017:27017'
+    volumes:
+      - govsync_mongo_data:/data/db
+volumes:
+  govsync_mongo_data:

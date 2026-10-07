@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "GovSync",
+    "slug": "govsync",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "govsync",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1f5f99"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.govsync.app",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "GovSync uses Face ID to securely sign you back in."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1f5f99"
+      },
+      "package": "com.govsync.app",
+      "permissions": ["USE_BIOMETRIC", "USE_FINGERPRINT"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "GovSync uses Face ID to securely sign you back in."
+        }
+      ]
+    ]
+  }
+}
